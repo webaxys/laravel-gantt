@@ -1,5 +1,8 @@
 # Laravel Gantt Chart
 
+[![Latest Stable Version](https://poser.pugx.org/swatkins/laravel-gantt/v/stable)](https://packagist.org/packages/swatkins/laravel-gantt)
+[![License](https://poser.pugx.org/swatkins/laravel-gantt/license)](https://packagist.org/packages/swatkins/laravel-gantt)
+
 A Laravel 5.x package to display items within a Gantt chart (adapted from [bastianallgeier/gantti](https://github.com/bastianallgeier/gantti)).
 
 ![Screenshot](https://github.com/swatkins/laravel-gantt/raw/master/src/assets/screenshot-gantt.png)
