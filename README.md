@@ -33,9 +33,14 @@ The model to display in the Gantt Chart will need to have properties of `label`,
 * `end` is a date or datetime (will need to pass this as a YYYY-MM-DD format)
 
 ```php
-// Get your model items however you deem necessary
+/**
+ * Get your model items however you deem necessary
+ */
 $select = 'title as label, DATE_FORMAT(start, \'%Y-%m-%d\') as start, DATE_FORMAT(end, \'%Y-%m-%d\') as end';
-$projects = \App\Project::select(\Illuminate\Support\Facades\DB::raw($select))->orderBy('start', 'asc')->orderBy('end', 'asc')->get();
+$projects = \App\Project::select(\Illuminate\Support\Facades\DB::raw($select))
+                ->orderBy('start', 'asc')
+                ->orderBy('end', 'asc')
+                ->get();
     
 /**
  *  You'll pass data as an array in this format:
@@ -48,7 +53,7 @@ $projects = \App\Project::select(\Illuminate\Support\Facades\DB::raw($select))->
  *  ]
  */
  
-$gantt = new Swatkins\Gantt\Gantt($projects->toArray(), array(
+$gantt = new Swatkins\LaravelGantt\Gantt($projects->toArray(), array(
     'title'      => 'Demo',
     'cellwidth'  => 25,
     'cellheight' => 35
@@ -62,7 +67,7 @@ return view('gantt')->with([ 'gantt' => $gantt ]);
 In your view, add the `gantt.css` file:
 
 ```html
-<link href="/css/gantt.css" rel="stylesheet" type="text/css">
+<link href="/vendor/swatkins/gantt/css/gantt.css" rel="stylesheet" type="text/css">
 ```
 
 And then output the gantt HTML:
