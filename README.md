@@ -1,5 +1,6 @@
 # Laravel Gantt Chart
 
+
 ## Installation
 
 Require this package with composer:
@@ -22,16 +23,28 @@ php artisan vendor:publish --tag="gantt"
 
 ## Usage
 
-The model to display in the Gantt Chart will need to have properties of `label`, a `start`, and `end` at minimum. \
+The model to display in the Gantt Chart will need to have properties of `label`, `start` and `end` at minimum.
 
 * `label` is the string to display for the item
 * `start` is a date or datetime (will need to pass this as a YYYY-MM-DD format)
 * `end` is a date or datetime (will need to pass this as a YYYY-MM-DD format)
 
 ```php
+// Get your model items however you deem necessary
 $select = 'title as label, DATE_FORMAT(start, \'%Y-%m-%d\') as start, DATE_FORMAT(end, \'%Y-%m-%d\') as end';
 $projects = \App\Project::select(\Illuminate\Support\Facades\DB::raw($select))->orderBy('start', 'asc')->orderBy('end', 'asc')->get();
     
+/**
+ *  You'll pass data as an array in this format:
+ *  [
+ *    [ 
+ *      'label' => 'The item title',
+ *      'start' => '2016-10-08',
+ *      'end'   => '2016-10-14'
+ *    ]
+ *  ]
+ */
+ 
 $gantt = new Swatkins\Gantt\Gantt($projects->toArray(), array(
     'title'      => 'Demo',
     'cellwidth'  => 25,
