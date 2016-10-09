@@ -1,6 +1,6 @@
 <?php
 
-namespace Swatkins\Gantt;
+namespace Swatkins\LaravelGantt;
 
 use Illuminate\Support\ServiceProvider;
 

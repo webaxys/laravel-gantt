@@ -1,6 +1,6 @@
 <?php
 
-namespace Swatkins\Gantt\Calendar;
+namespace Swatkins\LaravelGantt\Calendar;
 
 class CalendarDay extends CalendarObj {
     

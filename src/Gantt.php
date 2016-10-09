@@ -1,8 +1,8 @@
 <?php
 
-namespace Swatkins\Gantt;
+namespace Swatkins\LaravelGantt;
 
-use Swatkins\Gantt\Calendar\Calendar;
+use Swatkins\LaravelGantt\Calendar\Calendar;
 
 class Gantt {
     
