@@ -15,7 +15,7 @@ composer require swatkins/laravel-gantt
 After updating composer, add the ServiceProvider to the providers array in config/app.php
 
 ```php
-Swatkins\Gantt\ServiceProvider::class,
+Swatkins\LaravelGantt\GanttServiceProvider::class,
 ```
 
 Copy the package css file to your local css with the publish command:
