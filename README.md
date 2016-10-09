@@ -1,5 +1,8 @@
 # Laravel Gantt Chart
 
+A Laravel 5.x package to display items within a Gantt chart (adapted from [bastianallgeier/gantti](https://github.com/bastianallgeier/gantti)).
+
+![Screenshot](https://github.com/swatkins/laravel-gantt/raw/master/src/assets/screenshot-gantt.png)
 
 ## Installation
 
