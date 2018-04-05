@@ -8,7 +8,7 @@ A Laravel 5.x package to display items within a Gantt chart (adapted from [basti
 
 ## Installation
 
-Require this package with composer:
+>>>>>>Require this package with composer:
 
 ```shell
 composer require swatkins/laravel-gantt
